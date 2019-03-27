@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			body{
+				background: url(http://pic1.win4000.com/wallpaper/3/5944dfef0e4d5.jpg) no-repeat;
+				background-size: cover;
+			}
+			.box{
+				background-color:white;
+				opacity: .5;
+			}
+			.box ul{
+				width: 1000px;
+				height: 300px;
+				text-align: center;
+				line-height: 300px;
+				margin:0 auto;
+			}
+			img{
+				cursor: pointer;
+			}
+		</style>
+		
+	</head>
+	<body>
+		<div class="box">
+			<ul>
+				<img src="http://pic1.win4000.com/wallpaper/3/5944dfef0e4d5.jpg" width="150px" />
+				<img src="http://pic1.win4000.com/wallpaper/3/5944dfeb98578.jpg" width="150px" />
+				<img src="http://pic1.win4000.com/wallpaper/3/5944dfe9d89bd.jpg" width="150px" />
+				<img src="http://pic1.win4000.com/wallpaper/3/5944dff5f2b0a.jpg" width="150px" />
+				<img src="http://pic1.win4000.com/wallpaper/f/5922778fc038f.jpg" width="150px" />
+			</ul>
+		</div>
+	</body>
+	<script>
+		var img=document.getElementsByTagName("img");
+		var body=document.body;
+		var imgs=["url(http://pic1.win4000.com/wallpaper/3/5944dfef0e4d5.jpg)",
+				   "url(http://pic1.win4000.com/wallpaper/3/5944dfeb98578.jpg)",
+					"url(http://pic1.win4000.com/wallpaper/3/5944dfe9d89bd.jpg)",
+					"url(http://pic1.win4000.com/wallpaper/3/5944dff5f2b0a.jpg)",
+					"url(http://pic1.win4000.com/wallpaper/f/5922778fc038f.jpg)"];
+		
+		for(var i=0;i<img.length;i++){
+			img[i].index=i;
+			img[i].onclick=function(){
+				document.body.style.backgroundImage=imgs[this.index];
+			}
+		}
+	</script>
+</html>
